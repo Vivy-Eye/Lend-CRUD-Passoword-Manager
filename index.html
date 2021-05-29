@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD-Password-Manager</title>
+    <link rel="stylesheet" href="./src/index.css">
+  </head>
+  <body>
+    <noscript>
+      <h2>This page</h2>
+      <h3>can't work without</h3>
+      <h2>JavaScript</h2>
+      <style>
+        noscript{
+          text-align: center;
+          height: 50%;
+
+          background-color: darkorange;
+          color: honeydew;
+        }
+      </style>
+    </noscript>
+
+    <main id="main" class="main">
+      <div id="dropper" class="dropper">
+        <input type="file" id="dropper__i-file" class="dropper__i-file" />
+
+        <script src="./src/components/dropper/main.js"></script>
+        <link rel="stylesheet" href="./src/components/dropper/main.css">
+      </div>
+
+      <div id="crud" class="crud">
+        <div class="crud__inputs">
+          <div class="crud__inputs-container">
+            <input type="search" class="crud__i-search-base" placeholder="> Need some"/>
+
+            <label for="style" class="crud_i-styles">
+              <label><i>#</i><input type="radio" name="style" id=""></label>
+              <label><i>#</i><input type="radio" name="style" id=""></label>
+              <label><i>#</i><input type="radio" name="style" id=""></label>
+            </label>
+
+            <input type="button" class="crud__i-create-base" value="+" />
+            
+            <input type="button" class="crud__i-create-file" value="create file" />
+          </div>
+        </div>
+
+        <div class="crud__file-links"></div>
+
+        <form class="crud__form"></form>
+
+        <script src="./src/components/crud/table/getTable.js"></script>
+        <script src="./src/components/crud/table/getRow.js"></script>
+        <script src="./src/components/crud/table/adell.js"></script>
+        <script src="./src/components/crud/search/main.js"></script>
+        <script src="./src/components/crud/file/getFileUrl.js"></script>
+        <script src="./src/components/crud/main.js"></script>
+        <link rel="stylesheet" href="./src/components/crud/main.css">
+        <link rel="stylesheet" href="./src/components/crud/table/styles.css">
+      </div>
+
+      <div id="generator" class="generator">
+        <div class="gen-random">
+          <h2 class="gen-random__title">Random</h2>
+
+          <div class="gen-random__i-settings">
+            <label><input type="number" id="PasswordLength"><span>Length</span></label>
+            <label><input type="checkbox" checked id="IncludeSymbols"><span>( @#$% )</span></label>
+            <label><input type="checkbox" checked id="IncludeNumbers"><span>( 123456 )</span></label>
+            <label><input type="checkbox" checked id="IncludeLowercaseCharacters"><span>( abcdefgh )</span></label>
+            <label><input type="checkbox" checked id="IncludeUppercaseCharacters"><span>( ABCDEFGH )</span></label>
+            <label><input type="checkbox" checked id="ExcludeSimilarCharacters"><span>( i, l, 1, L, o, 0, O )</span></label>
+            <label><input type="checkbox" checked id="ExcludeAmbiguousCharacters"><span>( {}[]()/\'"`~,;:.<> )</span></label>
+          </div>
+
+          <div class="gen-random__output"><input type="text" id="gen-random__output"></div>
+        </div>
+
+        <div class="gen-md5">
+          <h2 class="gen-md5__title">MD5</h2>
+
+          <div class="gen-md5__input"><input type="text" id="gen-md5__i-in"></div>
+          <div class="gen-md5__output"><input type="text" id="gen-md5__i-out"></div>
+        </div>
+
+        <script src="./src/components/generator/gen-md5/MD5.js"></script>
+        <script src="./src/components/generator/main.js"></script>
+        <script src="./src/components/generator/gen-random/main.js"></script>
+        <script src="./src/components/generator/gen-md5/main.js"></script>
+
+        <link rel="stylesheet" href="./src/components/generator/main.css">
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-icons">
+        <ul>
+          <li class="social-icons__item"><a href="#" class="social-icons__link skype">
+            <i class="fa fa-skype fa-2x social-icons__icon"></i>
+          </a></li>
+          <li class="social-icons__item"><a href="#" class="social-icons__link telegram">
+            <i class="fa fa-telegram fa-2x social-icons__icon"></i>
+          </a></li>
+          <li class="social-icons__item"><a href="#" class="social-icons__link twitter">
+            <i class="fa fa-twitter fa-2x social-icons__icon"></i>
+          </a></li>
+          <li class="social-icons__item"><a href="#" class="social-icons__link vk">
+            <i class="fa fa-vk fa-2x social-icons__icon"></i>
+          </a></li>
+          <li class="social-icons__item"><a href="#" class="social-icons__link github">
+            <i class="fa fa-github fa-2x social-icons__icon"></i>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="copy-bottom-txt">
+        <p>© 2021 CRUD-Password-Manager.org.
+          <!-- All Rights Reserved | Design by <a href="#" target="_blank">StockShablonov</a> -->
+        </p>
+      </div>
+
+      <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+      <link rel="stylesheet" href="./src/components/footer/main.css">
+    </footer>
+  </body>
+</html>

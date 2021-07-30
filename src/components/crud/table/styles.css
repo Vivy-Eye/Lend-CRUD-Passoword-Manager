@@ -1,0 +1,64 @@
+/* ### CRUD FORM */
+.crud__form{
+  max-height: 50vh;
+  overflow-y: scroll;
+  overflow-y: auto;
+  /* background-color: snow; */
+  background-color: rgb(255, 248, 245);
+}
+
+/* ### ROW */
+.row{
+  display: flex;
+  flex-wrap: nowrap;
+
+  margin: .15rem 0;
+  padding: .15rem 0;
+}
+.row:nth-child(2n){
+  /* background-color: rgb(243, 243, 243); */
+  background-color: rgb(255, 233, 225);
+}
+/* ## Buttons */
+.row__buttons{
+  display: flex;
+  justify-content: center;
+}
+.row__i-dell,
+.row__i-add{
+  width: 1.5rem;
+  color: rgb(0, 5, 68);
+  background-color: #00000000;
+}
+.row__i-dell{
+  color: rgb(255, 44, 44)
+}
+
+/* ### CELL */
+.cell{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 .5rem;
+}
+/* ## Content */
+.cell__name,
+.cell__value{
+  display: block;
+  width: 10rem;
+  background-color: #00000000;
+}
+.cell__name{
+  text-align: center;
+  color: rgb(124, 124, 124);
+}
+
+/* ## Buttons */
+.cell__i-dell,
+.cell__i-add{
+  display: block;
+  width: 1rem;
+  background-color: #00000000;
+}
+.cell__i-dell{
+  color: rgb(255, 77, 77);
+}

@@ -1,0 +1,73 @@
+.footer{
+  /* background-color: rgb(0, 4, 60); */
+  background: rgb(20  , 25, 45);
+}
+
+/* ### Copy */
+.copy-bottom-txt{
+  color:rgba(240, 255, 255, 0.5);
+  font-size: .8rem;
+  padding: .5rem;
+}
+
+/* ### Social */
+.social-icons ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  /* height: 100vh; */
+}
+.social-icons__link{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #FFFFFF;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: .2em;
+  border-radius: 15%;
+  transition: all .4s;
+}
+
+a.skype,
+a.telegram,
+a.facebook,
+a.twitter,
+a.vk,
+a.github{
+  background-color: #00000000
+}
+
+.social-icons__link:hover::before{
+  transform: translateY(10px) scaleX(0.6) scaleY(0.8);
+  filter: blur(10px);
+}
+
+a.skype:hover,
+a.telegram:hover,
+a.github:hover,
+a.vk:hover,
+a.twitter:hover{
+  background-color: aliceblue;
+  text-shadow: 0 0 30px #7289da;
+}
+
+a.vk:hover{
+  color: #4c75a3;
+}
+a.github:hover{
+  color: #211F1F;
+}
+a.twitter:hover{
+  color: #55ACEE;
+}
+a.telegram:hover{
+  color: #0088CC;
+}
+a.skype:hover{
+  color: #0088CC;
+}

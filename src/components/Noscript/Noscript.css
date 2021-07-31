@@ -1,0 +1,43 @@
+.noscript{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #22222221;
+}
+.noscript-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 10rem;
+  width: 22rem;
+
+  /* glassmorphism */
+  background: rgba(255, 255, 141, 0.45);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 9.0px );
+  -webkit-backdrop-filter: blur( 9.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+  /* background-color: #ffffff70; */
+}
+.noscript__title {
+  color: #22007e;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  hyphens: auto;
+  letter-spacing: 0.08rem;
+  line-break: strict;
+  text-align-last: end;
+  text-align: start;
+  text-indent: 1rem;
+  word-break: normal;
+  word-spacing: 0.3rem;
+}

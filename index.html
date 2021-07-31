@@ -4,199 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="icon" href="./src/external-content.duckduckgo.com.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/index.css">
-    <script src="https://use.fontawesome.com/df966d76e1.js"></script>
-
-    <title>CRUD-Password-Manager</title>
+    <link rel="icon" href="./src/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <title>Master of Passwords</title>
   </head>
-  <body>
-    <header id="header" class="header">
-      <div class="bg"></div>
-      <div class="bg bg2"></div>
-      <div class="bg bg3"></div>
-
-      <!-- <div class="content">
-        <h1>Sliding Diagonals Background Effect</h1>
-      </div> -->
-
-      <div class="header__content">
-        <div class="profile">
-          <div class="profile__top">
-            <picture class="profile__photo">
-              <!-- <source srcset="test.avif" type="image/avif"> -->
-              <!-- <source srcset="test.webp" type="image/webp"> -->
-              <img src="./src/components/header/profile/#" alt="Photo">
-            </picture>
-
-            <div class="profile__info">
-              <h2 class="profile__name">Poznyakov Alexander</h2>
-              <p class="profile__comment">Hello! Im website developer and this is my main page.</p>
-            </div>
-
-            <!-- <div class="profile__top-button"></div> -->
-          </div>
-
-          <div class="profile__contacts">
-            <div class="profile__contact email">
-              <div class="profile__icon"><i class="fa fa-envelope"></i></div>
-              <h3 class="profile__title">email</h3>
-              <p class="profile__link">iaks.fine@gmail.com</p>
-            </div>
-          </div>
-
-          <link rel="stylesheet" href="./src/components/header/profile/main.css">
-        </div>
-
-        <div class="navigation">
-          <h2 class="navigation__title">Menu</h2>
-          <nav id="nav" class="nav">
-            <ul class="nav__ul">
-              <li class="nav__li"><a class="nav__link" href="#home">Home</a></li>
-              <li class="nav__li"><a class="nav__link" href="#home">Table</a></li>
-              <li class="nav__li"><a class="nav__link" href="#home">Password</a></li>
-              <li class="nav__li"><a class="nav__link" href="#home">some</a></li>
-              <li class="nav__li"><a class="nav__link" href="#home">End</a></li>
-            </ul>
-          </nav>
-
-          <link rel="stylesheet" href="./src/components/header/navigation/main.css">
-        </div>
-      </div>
-
-      <link rel="stylesheet" href="./src/components/header/main.css">
-    </header>
-
+  <body class="container">
     <noscript class="noscript">
-      <h2 class="noscript__0">This page</h2>
-      <h3 class="noscript__1">can't work without</h3>
-      <h2 class="noscript__2">JavaScript</h2>
-      <style>
-        .noscript{
-          text-align: center;
-          height: 100vh;
-          font-size: 2rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: darkorange;
-          color: honeydew;
-        }
-        .noscript > *{
-          padding: 1rem 2rem;
-        }
-      </style>
+      <div class="noscript-container">
+        <h2 class="noscript__title">Where is JavaScript -_- ?</h2>
+      </div>
+      <link rel="stylesheet" href="./src/components/Noscript/Noscript.css" />
     </noscript>
 
-    <main id="main" class="main">
-      <div id="dropper" class="dropper">
-        <input type="file" id="dropper__i-file" class="dropper__i-file" />
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
 
-        <script src="./src/components/dropper/main.js"></script>
-        <link rel="stylesheet" href="./src/components/dropper/main.css">
-      </div>
-
-      <div id="crud" class="crud">
-        <div class="crud__inputs">
-          <div class="crud__inputs-container">
-            <input type="search" class="crud__i-search-base" placeholder="> Need some"/>
-
-            <label for="style" class="crud_i-styles">
-              <label><i>#</i><input type="radio" name="style" id=""></label>
-              <label><i>#</i><input type="radio" name="style" id=""></label>
-              <label><i>#</i><input type="radio" name="style" id=""></label>
-            </label>
-
-            <input type="button" class="crud__i-create-base" value="+" />
-            
-            <input type="button" class="crud__i-create-file" value="create file" />
-          </div>
+    <div id="crud-table" class="crud-table">
+      <div class="panel">
+        <div class="panel-dropper">
+          <input type="file" class="panel-dropper__btn-file" />
+          <script src="./src/components/Сrud-Table/Panel/panel-dropper.js"></script>
         </div>
 
-        <div class="crud__file-links"></div>
-
-        <form class="crud__form"></form>
-
-        <script src="./src/components/crud/table/getTable.js"></script>
-        <script src="./src/components/crud/table/getRow.js"></script>
-        <script src="./src/components/crud/table/adell.js"></script>
-        <script src="./src/components/crud/search/main.js"></script>
-        <script src="./src/components/crud/file/getFileUrl.js"></script>
-        <script src="./src/components/crud/main.js"></script>
-        <link rel="stylesheet" href="./src/components/crud/main.css">
-        <link rel="stylesheet" href="./src/components/crud/table/styles.css">
-      </div>
-
-      <div id="generator" class="generator">
-        <div class="gen-random">
-          <h2 class="gen-random__title">Random</h2>
-
-          <div class="gen-random__i-settings">
-            <label><input type="number" id="PasswordLength"><span>Length</span></label>
-            <label><input type="checkbox" checked id="IncludeSymbols"><span>( @#$% )</span></label>
-            <label><input type="checkbox" checked id="IncludeNumbers"><span>( 123456 )</span></label>
-            <label><input type="checkbox" checked id="IncludeLowercaseCharacters"><span>( abcdefgh )</span></label>
-            <label><input type="checkbox" checked id="IncludeUppercaseCharacters"><span>( ABCDEFGH )</span></label>
-            <label><input type="checkbox" checked id="ExcludeSimilarCharacters"><span>( i, l, 1, L, o, 0, O )</span></label>
-            <label><input type="checkbox" checked id="ExcludeAmbiguousCharacters"><span>( {}[]()/\'"`~,;:.<> )</span></label>
-          </div>
-
-          <div class="gen-random__output"><input type="text" id="gen-random__output"></div>
+        <div class="panel-control">
+          <input type="search" class="panel-control__btn-search" />
+          <button class="panel-control__btn-create-row">add row</button>
+          <button class="panel-control__btn-create-file">create file</button>
+          <script src="./src/components/Сrud-Table/Panel/panel-control.js"></script>
+          <script src="./src/components/Сrud-Table/Panel/getLinkOnFile.js"></script>
         </div>
-
-        <div class="gen-md5">
-          <h2 class="gen-md5__title">MD5</h2>
-
-          <div class="gen-md5__input"><input type="text" id="gen-md5__i-in"></div>
-          <div class="gen-md5__output"><input type="text" id="gen-md5__i-out"></div>
-        </div>
-
-        <script src="./src/components/generator/gen-md5/MD5.js"></script>
-        <script src="./src/components/generator/main.js"></script>
-        <script src="./src/components/generator/gen-random/main.js"></script>
-        <script src="./src/components/generator/gen-md5/main.js"></script>
-
-        <link rel="stylesheet" href="./src/components/generator/main.css">
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <!-- <div class="social-icons">
-        <ul>
-          <li class="social-icons__item"><a href="#" class="social-icons__link skype">
-            <i class="fa fa-skype fa-2x social-icons__icon"></i>
-          </a></li>
-          <li class="social-icons__item"><a href="#" class="social-icons__link telegram">
-            <i class="fa fa-telegram fa-2x social-icons__icon"></i>
-          </a></li>
-          <li class="social-icons__item"><a href="#" class="social-icons__link twitter">
-            <i class="fa fa-twitter fa-2x social-icons__icon"></i>
-          </a></li>
-          <li class="social-icons__item"><a href="#" class="social-icons__link vk">
-            <i class="fa fa-vk fa-2x social-icons__icon"></i>
-          </a></li>
-          <li class="social-icons__item"><a href="#" class="social-icons__link github">
-            <i class="fa fa-github fa-2x social-icons__icon"></i>
-          </a></li>
-        </ul>
-      </div> -->
-
-      <div class="attraction">
-        <!--Created By -> https://codepen.io/ThreePixDroid/pen/JjPwEgR -->
-        <canvas></canvas>
-        <script src="./src/components/footer/attraction/main.js"></script>
-        <link rel="stylesheet" href="./src/components/footer/attraction/main.css">
       </div>
 
-      <!-- <div class="copy-bottom-txt">
-        <p>© 2021 CRUD-Password-Manager.org. -->
-          <!-- All Rights Reserved | Design by <a href="#" target="_blank">StockShablonov</a> -->
-        <!-- </p>
-      </div> -->
+      <form class="table">
+        <script src="./src/components/Сrud-Table/Table/Table.js"></script>
+        <script src="./src/components/Сrud-Table/Table/getRow.js"></script>
+        <script src="./src/components/Сrud-Table/Table/getCell.js"></script>
+        <script src="./src/components/Сrud-Table/Table/Model.js"></script>
+      </form>
 
-      <link rel="stylesheet" href="./src/components/footer/main.css">
-    </footer>
+      <script src="./src/components/Сrud-Table/Crud-Table.js"></script>
+    </div>
   </body>
 </html>

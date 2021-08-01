@@ -11,22 +11,18 @@ function getCell(name, obj) {
   const cell = document.createElement("span");
   cell.classList = "cell";
 
-  // Make inputs container
-  const span_cont = document.createElement("span");
-  span_cont.classList = "cell__content";
-  ((icName, icValue) => {
-    icName.type = "text";
-    icName.classList = "cell__name forSearch";
-    icName.value = name;
-    icValue.type = "text";
-    icValue.classList = "cell__value forSearch";
-    icValue.value = obj[name];
+  // Make and add inputs
+  const icName = document.createElement("input");
+  const icValue = document.createElement("input");
 
-    span_cont.append(icName);
-    span_cont.append(icValue);
-  })(document.createElement("input"), document.createElement("input"));
-  // Add inputs in cell
-  cell.append(span_cont);
+  icName.type = "text";
+  icName.classList = "cell__name forSearch";
+  icName.value = name;
+  icValue.type = "text";
+  icValue.classList = "cell__value forSearch";
+  icValue.value = obj[name];
+  cell.append(icName);
+  cell.append(icValue);
 
   // Make btnd container
   const span_btn = document.createElement("span");

@@ -5,33 +5,34 @@
  * @param {Array} object
  * @returns Object HTML
  */
- function getRow(object) {
-  const row = document.createElement("div"); // Make "row"
+function getRow(object) {
+  // Make row of table
+  const row = document.createElement("div");
   row.classList = "row";
 
-  // Add cells
-  for (var name in object)
-    row.appendChild(getCell(name, object));
+  // Make and add cells in row
+  for (var name in object) row.append(getCell(name, object));
 
-  // Add buttons
+  // Make btns container
   const span = document.createElement("span");
   span.classList = "row__buttons";
-  ((iDellR, iAddR)=>{
+  // Make btns for row
+  ((iDellR, iAddR) => {
     iDellR.type = "button";
     iDellR.classList = "row__i-dell";
     iDellR.value = "x";
-
-    iDellR.addEventListener('click', dellRow, false);
-    span.append(iDellR);
-
     iAddR.type = "button";
     iAddR.classList = "row__i-add";
     iAddR.value = "+";
 
-    iAddR.addEventListener('click', addRow, false);
+    iDellR.addEventListener("click", dellRow, false);
+    span.append(iDellR);
+    iAddR.addEventListener("click", addRow, false);
     span.append(iAddR);
-  })(document.createElement("input"),document.createElement("input"))
+  })(document.createElement("input"), document.createElement("input"));
+  // Add btns in row
   row.append(span);
 
+  // Return row with cells and btns
   return row;
 }

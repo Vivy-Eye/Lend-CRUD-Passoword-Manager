@@ -1,0 +1,10 @@
+.panel {
+  padding: 1rem;
+  height: 16rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}

@@ -1,0 +1,31 @@
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    /* flex: 1 auto; */
+  }
+}
+.row__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 2.1rem;
+}
+.row__i-dell,
+.row__i-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.row__i-dell {
+  background-color: rgba(255, 127, 80, 0.5);
+}
+.row__i-add {
+  background-color: rgba(128, 255, 0, 0.5);
+}

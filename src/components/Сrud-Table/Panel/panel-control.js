@@ -11,6 +11,7 @@
   const btn_create_row = CT.querySelector(".panel-control__btn-create-row");
   // Button create file in control panel
   const btn_create_file = CT.querySelector(".panel-control__btn-create-file");
+  const link_container = CT.querySelector(".panel__link-container");
 
   // Simple Teplate for creating Table
   const template_db = [{ "#1": "sdwal", "#2": "drad", "#3": "lkao" }];
@@ -30,9 +31,7 @@
   // Event "create file"
   btn_create_file.addEventListener(
     "click",
-    (ev) => {
-      add(document, getLinkOnFile(ev));
-    },
+    (ev) => add(link_container, getLinkOnFile(ev)),
     false
   );
 })();

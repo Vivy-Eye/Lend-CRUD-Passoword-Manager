@@ -7,7 +7,7 @@
  */
 function getLinkOnFile(ev) {
   ev.preventDefault();
-  const file_name = prompt("File Name") || "File_" + Math.random();
+  const file_name = prompt("File Name") || "File_" + Math.random().toString(16);
 
   // Create file
   const database = getDBinTable();

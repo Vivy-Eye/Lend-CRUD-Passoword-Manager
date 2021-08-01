@@ -1,0 +1,48 @@
+.cell {
+  width: 12rem;
+  padding: 1px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.cell__name,
+.cell__value {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+  letter-spacing: -0.02rem;
+  text-align: center;
+  padding: 0 0.2rem;
+
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+.cell__name {
+  width: 2rem;
+}
+.cell__value {
+  width: 7rem;
+}
+
+.cell__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 2.1rem;
+}
+.cell__i-dell,
+.cell__i-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.cell__i-dell {
+  background-color: rgba(255, 127, 80, 0.2);
+}
+.cell__i-add {
+  background-color: rgba(128, 255, 0, 0.2);
+}

@@ -3,6 +3,10 @@
   justify-content: flex-start;
   align-items: center;
 }
+.row:nth-child(4n) {
+  background-color: #ffffff18;
+  border-radius: 1rem;
+}
 @media (max-width: 600px) {
   .row {
     flex-direction: column;
@@ -24,8 +28,10 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .row__i-dell {
-  background-color: rgba(255, 127, 80, 0.5);
+  color: rgba(255, 127, 80, 1);
+  border: 1px solid rgba(255, 127, 80, 1);
 }
 .row__i-add {
-  background-color: rgba(128, 255, 0, 0.5);
+  color: rgba(128, 255, 0, 1);
+  border: 1px solid rgba(128, 255, 0, 1);
 }

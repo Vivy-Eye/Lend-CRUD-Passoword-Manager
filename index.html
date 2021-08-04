@@ -25,11 +25,13 @@
         <div class="panel-dropper">
           <input type="file" class="panel-dropper__btn-file" />
         </div>
+
         <div class="panel-control">
-          <input class="panel-control__btn-search" type="search" />
+          <input class="panel-control__btn-search" type="search" placeholder=" Q ... " />
           <button class="panel-control__btn-create-row">add row</button>
           <button class="panel-control__btn-create-file">create file</button>
         </div>
+
         <div class="panel__link-container"></div>
       </div>
       <div class="table-container">
@@ -68,13 +70,65 @@
         href="./src/components/Сrud-Table/Panel/panel-control/panel-control.css"
       />
       <script src="./src/components/Сrud-Table/Panel/panel-control/getLinkOnFile.js"></script>
-      
+
       <!-- Crud-Table -->
       <script src="./src/components/Сrud-Table/Crud-Table.js"></script>
       <link
         rel="stylesheet"
         href="./src/components/Сrud-Table/Panel/Panel.css"
       />
+    </div>
+
+    <div id="passwords" class="passwords">
+      <div class="random">
+        <h3 class="random__title">random</h3>
+        <label>
+          <input type="number" id="PasswordLength" />
+        </label>
+        <label>
+          <input type="checkbox" checked id="IncludeSymbols" />
+          <span>( @#$% )</span>
+        </label>
+        <label>
+          <input type="checkbox" checked id="IncludeNumbers" />
+          <span>( 123456 )</span>
+        </label>
+        <label>
+          <input type="checkbox" checked id="IncludeLowercaseCharacters" />
+          <span>( abcdefgh )</span>
+        </label>
+        <label>
+          <input type="checkbox" checked id="IncludeUppercaseCharacters" />
+          <span>( ABCDEFGH )</span>
+        </label>
+        <label>
+          <input type="checkbox" checked id="ExcludeSimilarCharacters" />
+          <span>( i, l, 1, L, o, 0, O )</span>
+        </label>
+        <label>
+          <input type="checkbox" checked id="ExcludeAmbiguousCharacters" />
+          <span>( {}[]()/\'"`~,;:.<> )</span>
+        </label>
+        <label>
+          <input type="text" id="random__output" />
+        </label>
+
+        <script src="./src/components/Passwords/Random/Random.js"></script>
+      </div>
+
+      <div class="md5">
+        <h3 class="md5__title">MD5</h3>
+        <label>
+          <input type="text" id="md5__text" />
+        </label>
+        <label>
+          <input type="text" id="md5__output" />
+        </label>
+        <script src="./src/components/Passwords/MD5/MD5.js"></script>
+        <script src="./src/components/Passwords/MD5/heandler.js"></script>
+      </div>
+
+      <link rel="stylesheet" href="./src/components/Passwords/Passwords.css" />
     </div>
   </body>
 </html>

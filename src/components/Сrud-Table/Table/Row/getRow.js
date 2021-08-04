@@ -10,9 +10,6 @@ function getRow(object) {
   const row = document.createElement("div");
   row.classList = "row";
 
-  // Make and add cells in row
-  for (var name in object) row.append(getCell(name, object));
-
   // Make btns container
   const span = document.createElement("span");
   span.classList = "row__buttons";
@@ -32,6 +29,9 @@ function getRow(object) {
   })(document.createElement("input"), document.createElement("input"));
   // Add btns in row
   row.append(span);
+
+  // Make and add cells in row
+  for (var name in object) row.append(getCell(name, object));
 
   // Return row with cells and btns
   return row;

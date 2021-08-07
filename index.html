@@ -24,17 +24,24 @@
       <div class="panel">
         <div class="panel-dropper">
           <input type="file" class="panel-dropper__btn-file" />
+          <p class="panel-dropper__text">drag and drop</p>
         </div>
 
         <div class="panel-control">
-          <input class="panel-control__btn-search" type="search" placeholder=" Q ... " />
+          <input
+            class="panel-control__btn-search"
+            type="search"
+            placeholder=" Q ... "
+          />
           <button class="panel-control__btn-create-row">add row</button>
           <button class="panel-control__btn-create-file">create file</button>
         </div>
 
         <div class="panel__link-container"></div>
       </div>
+
       <div class="table-container">
+        <!-- <h2 class="table-container__title">table inner</h2> -->
         <form class="table"></form>
       </div>
 
@@ -64,6 +71,7 @@
       />
 
       <!-- panel-control -->
+      <script src="./src/components/Сrud-Table/Panel/panel-control/searchInTable.js"></script>
       <script src="./src/components/Сrud-Table/Panel/panel-control/panel-control.js"></script>
       <link
         rel="stylesheet"
@@ -80,6 +88,8 @@
     </div>
 
     <div id="passwords" class="passwords">
+      <h2 class="passwords__title">make your passwords</h2>
+
       <div class="random">
         <h3 class="random__title">random</h3>
         <label>

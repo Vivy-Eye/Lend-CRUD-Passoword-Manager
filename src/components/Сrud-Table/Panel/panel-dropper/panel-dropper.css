@@ -15,6 +15,18 @@
 }
 
 .panel-dropper input[type=file]{
+  color: #00000000;
   height: 100%;
   width: 100%;
+}
+
+.panel-dropper__text{
+  user-select: none;
+  position: absolute;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  word-spacing: .2rem;
+  text-transform: capitalize;
 }

@@ -19,15 +19,13 @@
   const add = (a, b) => a.appendChild(b);
 
   // Event "search"
-  // btn_search.addEventListener("keyup", searchRow, false);
-
+  btn_search.addEventListener("keyup", searchInTable, false);
   // Event "create row"
   btn_create_row.addEventListener(
     "click",
     () => add(Table, getTable(template_db).table),
     false
   );
-
   // Event "create file"
   btn_create_file.addEventListener(
     "click",

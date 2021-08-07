@@ -3,39 +3,26 @@
 const log = (t) => console.log(t);
 
 function searchInTable() {
-  const schV = this.value.toLocaleLowerCase();
-  const rows = form.querySelectorAll(".row");
+  // const schV = this.value.toLocaleLowerCase();
+  const T = this.value.toLocaleLowerCase();
 
-  rows.map((row) => {
-    const cells = row.querySelectorAll(".cell");
+  const Rows = document.querySelectorAll(".row");
 
-    for (let i = 0; cells.length > i; i++) {
-      const btnV = cells[i]
+  Rows.forEach((Row) => {
+    const Cells = Row.querySelectorAll(".cell");
+
+    for (let i = 0; Cells.length > i; i++) {
+      const V = Cells[i]
         .querySelector(".cell__value")
         .value.toLocaleLowerCase();
 
-      if (schV == "") {
-        row.style.display = "";
-        break;
-      } else if (~btnV.indexOf(schV)) {
-        row.style.display = "";
+      if (~V.indexOf(T)) {
+        Row.style.display = "";
         break;
       } else {
-        row.style.display = "none";
+        Row.style.display = "none";
+        break;
       }
     }
-  });
-}
-
-function findTableColum(input) {
-  const rows = document.querySelectorAll("#table-area tbody tr");
-
-  rows.forEach((row) => {
-    div = row.querySelector("div." + input.id);
-
-    if (input.value == "") row.setAttribute("style", "");
-    else if (~div.innerText.toLocaleLowerCase().indexOf(input.value))
-      row.setAttribute("style", "");
-    else row.setAttribute("style", "display: none");
   });
 }

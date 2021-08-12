@@ -19,6 +19,7 @@
 .panel-control__btn-create-row,
 .panel-control__btn-create-file {
   /* background-color: #ffffff4d; */
+  color: rgb(0, 24, 37);
   border: 1px solid #ffffff60;
   border-radius: 1rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;

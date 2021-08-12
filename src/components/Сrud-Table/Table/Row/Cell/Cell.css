@@ -1,5 +1,5 @@
 .cell {
-  width: 12rem;
+  width: 11rem;
   padding: 0 .1rem .2rem .5rem;
   display: flex;
   justify-content: space-between;
@@ -31,15 +31,26 @@
 .cell__buttons {
   display: flex;
   justify-content: space-between;
-  width: 2.1rem;
+  width: 1.8rem;
 }
 .cell__i-dell,
 .cell__i-add {
-  color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  /* color: aliceblue; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: .8rem;
+  /* border-radius: 1rem; */
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+
+  color: #00000000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.cell__i-dell{
+  background-image: url("../../../../../static/delete.png");
+}
+.cell__i-add{
+  background-image: url("../../../../../static/plus.png");
 }

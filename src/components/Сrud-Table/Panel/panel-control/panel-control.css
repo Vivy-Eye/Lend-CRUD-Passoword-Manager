@@ -31,6 +31,12 @@
   text-transform: capitalize;
   width: 6.5rem;
 }
+.panel-control__btn-create-row::before{
+  content: "✏️";
+}
+.panel-control__btn-create-file::before{
+  content: "💾";
+}
 
 .panel__link-container {
   width: 60rem;

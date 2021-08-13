@@ -1,7 +1,7 @@
 # Lend-CRUD-Passoword-Manager
 
 Native CRUD Password Manager
-See Demo [there](https://a-p-i-s.github.io/Lend-CRUD-Passoword-Manager/).
+See Demo [there](https://a-p-i-s.github.io/Lend-CRUD-Password-Manager/).
 
 ## Why?
 

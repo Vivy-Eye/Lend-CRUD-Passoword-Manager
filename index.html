@@ -1,148 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="document">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./src/static/icon.ico" type="image/x-icon" />
+    <link rel="icon" href="./src/icon1.png" type="image/x-icon" />
     <link rel="stylesheet" href="./src/index.css" />
-    <title>Master of Passwords</title>
+    <title>CRID REACTIVE APP</title>
   </head>
   <body class="container">
     <noscript class="noscript">
-      <div class="noscript-container">
-        <h2 class="noscript__title">
-          Where is <span class="noscript__normal">JavaScript</span>
-          <span class="noscript__smile">-_-</span> ?
-        </h2>
-      </div>
-      <link rel="stylesheet" href="./src/components/Noscript/Noscript.css" />
+      <h2 class="noscript__title">Need JavaScript</h2>
     </noscript>
 
-    <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
-
-    <div id="crud-table" class="crud-table">
-      <div class="panel">
-        <div class="panel-dropper">
-          <input type="file" class="panel-dropper__btn-file" />
-          <div class="panel-dropper__icon"></div>
-          <p class="panel-dropper__text">drag and drop</p>
-        </div>
-
-        <div class="panel-control">
+    <div class="table">
+      <div class="files">
+        <div class="dropper">
           <input
-            class="panel-control__btn-search"
-            type="search"
-            placeholder=" 🔍 ... "
+            type="file"
+            multiple
+            class="dropper__btn-file dropper_btn_file"
           />
-          <button class="panel-control__btn-create-row">add row</button>
-          <button class="panel-control__btn-create-file">create file</button>
         </div>
+        <div class="list files_list"></div>
+        <div class="links files_links"></div>
 
-        <div class="panel__link-container"></div>
+        <script src="./src/pages/Table/Files/Stor/Stor.js"></script>
+        <script src="./src/pages/Table/Files/Page/addFileTable.js"></script>
+        <script src="./src/pages/Table/Files/Page/addFile.js"></script>
+        <script src="./src/pages/Table/Files/Read/readSaveFile.js"></script>
+        <script src="./src/pages/Table/Files/Read/readFiles.js"></script>
+        <script src="./src/pages/Table/Files/Files.js"></script>
+        <link rel="stylesheet" href="./src/pages/Table/Files/File.css" />
       </div>
 
-      <div class="table-container">
-        <!-- <h2 class="table-container__title">table inner</h2> -->
-        <form class="table"></form>
+      <div class="control">
+        <label class="control__cont-btn">
+          <input
+            type="search"
+            autocomplete
+            autofocus
+            class="control__btn-search"
+            placeholder="🔍 Search ..."
+            list="search_values"
+            maxlength="120"
+          />
+          <datalist id="search_values">
+            <optgroup>
+              <option>Gmail</option>
+            </optgroup>
+            <optgroup></optgroup>
+          </datalist>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-add" />
+          <span>✏️ Add Row</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-create" />
+          <span>💾 Create File</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-delete-table" />
+          <span>📃 Delete table</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-delete-files" />
+          <span>📃 Delete files</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="checkbox" checked class="control__btn-hide" />
+          <span> Hide values</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="checkbox" class="control__btn-edit" />
+          <span>Enable editing</span>
+        </label>
+
+        <script src="./src/pages/Table/Control/Heandlers/toggleTableEditing.js"></script>
+        <script src="./src/pages/Table/Control/Heandlers/toggleClassValue.js"></script>
+        <script src="./src/pages/Table/Control/Heandlers/searchInTable.js"></script>
+        <script src="./src/pages/Table/Control/Heandlers/getLinkOnFile.js"></script>
+        <script defer src="./src/pages/Table/Control/Control.js"></script>
+
+        <link rel="stylesheet" href="./src/pages/Table/Control/Control.css" />
       </div>
 
-      <!-- panel-dropper -->
-      <script src="./src/components/Сrud-Table/Panel/panel-dropper/panel-dropper.js"></script>
-      <link
-        rel="stylesheet"
-        href="./src/components/Сrud-Table/Panel/panel-dropper/panel-dropper.css"
-      />
-
-      <!-- Table -->
-      <script src="./src/components/Сrud-Table/Table/getTable.js"></script>
-      <script src="./src/components/Сrud-Table/Table/Model.js"></script>
-      <script src="./src/components/Сrud-Table/Table/Row/getRow.js"></script>
-      <script src="./src/components/Сrud-Table/Table/Row/Cell/getCell.js"></script>
-      <link
-        rel="stylesheet"
-        href="./src/components/Сrud-Table/Table/Table.css"
-      />
-      <link
-        rel="stylesheet"
-        href="./src/components/Сrud-Table/Table/Row/Row.css"
-      />
-      <link
-        rel="stylesheet"
-        href="./src/components/Сrud-Table/Table/Row/Cell/Cell.css"
-      />
-
-      <!-- panel-control -->
-      <script src="./src/components/Сrud-Table/Panel/panel-control/searchInTable.js"></script>
-      <script src="./src/components/Сrud-Table/Panel/panel-control/panel-control.js"></script>
-      <link
-        rel="stylesheet"
-        href="./src/components/Сrud-Table/Panel/panel-control/panel-control.css"
-      />
-      <script src="./src/components/Сrud-Table/Panel/panel-control/getLinkOnFile.js"></script>
-
-      <!-- Crud-Table -->
-      <script src="./src/components/Сrud-Table/Crud-Table.js"></script>
-      <link
-        rel="stylesheet"
-        href="./src/components/Сrud-Table/Panel/Panel.css"
-      />
-    </div>
-
-    <div id="passwords" class="passwords">
-      <h2 class="passwords__title">make your passwords</h2>
-
-      <div class="random">
-        <h3 class="random__title">random</h3>
-        <label>
-          <input type="number" id="PasswordLength" />
-        </label>
-        <label>
-          <input type="checkbox" checked id="IncludeSymbols" />
-          <span>( @#$% )</span>
-        </label>
-        <label>
-          <input type="checkbox" checked id="IncludeNumbers" />
-          <span>( 123456 )</span>
-        </label>
-        <label>
-          <input type="checkbox" checked id="IncludeLowercaseCharacters" />
-          <span>( abcdefgh )</span>
-        </label>
-        <label>
-          <input type="checkbox" checked id="IncludeUppercaseCharacters" />
-          <span>( ABCDEFGH )</span>
-        </label>
-        <label>
-          <input type="checkbox" checked id="ExcludeSimilarCharacters" />
-          <span>( i, l, 1, L, o, 0, O )</span>
-        </label>
-        <label>
-          <input type="checkbox" checked id="ExcludeAmbiguousCharacters" />
-          <span>( {}[]()/\'"`~,;:.<> )</span>
-        </label>
-        <label>
-          <input type="text" id="random__output" />
-        </label>
-
-        <script src="./src/components/Passwords/Random/Random.js"></script>
+      <div class="table-container hide_cells_values no_editing">
+        <script src="./src/pages/Table/Container/Comp/getButtons.js"></script>
+        <script src="./src/pages/Table/Container/Model/Model.js"></script>
+        <script src="./src/pages/Table/Container/Row/Cell/getCellFields.js"></script>
+        <script src="./src/pages/Table/Container/Row/Cell/getCell.js"></script>
+        <script src="./src/pages/Table/Container/Row/getRow.js"></script>
+        <script src="./src/pages/Table/Container/getTable.js"></script>
+        <link
+          rel="stylesheet"
+          href="./src/pages/Table/Container/Container.css"
+        />
+        <link rel="stylesheet" href="./src/pages/Table/Container/Row/Row.css" />
+        <link
+          rel="stylesheet"
+          href="./src/pages/Table/Container/Row/Cell/Cell.css"
+        />
       </div>
-
-      <div class="md5">
-        <h3 class="md5__title">MD5</h3>
-        <label>
-          <input type="text" id="md5__text" />
-        </label>
-        <label>
-          <input type="text" id="md5__output" />
-        </label>
-        <script src="./src/components/Passwords/MD5/MD5.js"></script>
-        <script src="./src/components/Passwords/MD5/heandler.js"></script>
-      </div>
-
-      <link rel="stylesheet" href="./src/components/Passwords/Passwords.css" />
     </div>
   </body>
 </html>

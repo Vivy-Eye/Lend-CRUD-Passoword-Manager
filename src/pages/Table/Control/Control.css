@@ -1,0 +1,23 @@
+.control input{
+  background-color: #00000000;
+}
+
+.control {
+  height: 2.5rem;
+  background-color: #6f4518;
+  /* border: 1px solid rgba(139, 139, 139, 1); */
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.control__cont-btn{
+  background-color: #ffedd8;
+  color: #583101;
+  border-radius: 5px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  padding: 0 .5rem;
+}

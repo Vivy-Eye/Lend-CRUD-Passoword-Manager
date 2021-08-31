@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="document">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../src/icon1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/index.css" />
+    <title>CRID REACTIVE APP</title>
+  </head>
+  <body class="container">
+    <div class="table">
+      <div class="files">
+        <div class="dropper">
+          <input
+            type="file"
+            multiple
+            class="dropper__btn-file dropper_btn_file"
+          />
+        </div>
+        <div class="list files_list"></div>
+        <div class="links files_links"></div>
+
+        <script src="../src/pages/Table/Files/Stor/Stor.js"></script>
+        <script src="../src/pages/Table/Files/Page/addFileTable.js"></script>
+        <script src="../src/pages/Table/Files/Page/addFile.js"></script>
+        <script src="../src/pages/Table/Files/Read/readSaveFile.js"></script>
+        <script src="../src/pages/Table/Files/Read/readFiles.js"></script>
+        <script src="../src/pages/Table/Files/Files.js"></script>
+        <link rel="stylesheet" href="../src/pages/Table/Files/File.css" />
+      </div>
+
+      <div class="control">
+        <label class="control__cont-btn">
+          <input
+            type="search"
+            autocomplete
+            autofocus
+            class="control__btn-search"
+            placeholder="🔍 Search ..."
+            list="search_values"
+            maxlength="120"
+          />
+          <datalist id="search_values">
+            <optgroup>
+              <option>Gmail</option>
+            </optgroup>
+            <optgroup></optgroup>
+          </datalist>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-add" />
+          <span>✏️ Add Row</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-create" />
+          <span>💾 Create File</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-delete-table" />
+          <span>📃 Delete table</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="button" class="control__btn-delete-files" />
+          <span>📃 Delete files</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="checkbox" checked class="control__btn-hide" />
+          <span> Hide values</span>
+        </label>
+
+        <label class="control__cont-btn">
+          <input type="checkbox" class="control__btn-edit" />
+          <span>Enable editing</span>
+        </label>
+
+        <script src="../src/pages/Table/Control/Heandlers/toggleTableEditing.js"></script>
+        <script src="../src/pages/Table/Control/Heandlers/toggleClassValue.js"></script>
+        <script src="../src/pages/Table/Control/Heandlers/searchInTable.js"></script>
+        <script src="../src/pages/Table/Control/Heandlers/getLinkOnFile.js"></script>
+        <script defer src="../src/pages/Table/Control/Control.js"></script>
+
+        <link rel="stylesheet" href="../src/pages/Table/Control/Control.css" />
+      </div>
+
+      <div class="table-container hide_cells_values no_editing">
+        <script src="../src/pages/Table/Container/Comp/getButtons.js"></script>
+        <script src="../src/pages/Table/Container/Model/Model.js"></script>
+        <script src="../src/pages/Table/Container/Row/Cell/getCellFields.js"></script>
+        <script src="../src/pages/Table/Container/Row/Cell/getCell.js"></script>
+        <script src="../src/pages/Table/Container/Row/getRow.js"></script>
+        <script src="../src/pages/Table/Container/getTable.js"></script>
+        <link
+          rel="stylesheet"
+          href="../src/pages/Table/Container/Container.css"
+        />
+        <link rel="stylesheet" href="../src/pages/Table/Container/Row/Row.css" />
+        <link
+          rel="stylesheet"
+          href="../src/pages/Table/Container/Row/Cell/Cell.css"
+        />
+      </div>
+    </div>
+  </body>
+</html>

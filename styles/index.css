@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: ghostwhite;
+  scroll-behavior: smooth;
+  font-family: "Roboto", -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 1rem;
+  color: black;
+  background-color: transparent;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 1rem;
+  color: black;
+  background-color: transparent;
+  /* overflow-y: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  text-indent: inherit;
+  word-spacing: 0.2rem;
+}

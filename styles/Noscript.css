@@ -1,0 +1,24 @@
+.noscript {
+  padding: 1rem;
+}
+
+.noscript__wrap {
+  margin: auto;
+  width: min(30rem, 100% - 1rem);
+  background-color: whitesmoke;
+  outline: 1px solid black;
+}
+
+.noscript__title {
+  font-weight: 800;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.noscript__text {
+  text-indent: 1rem;
+}

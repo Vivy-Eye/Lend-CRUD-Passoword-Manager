@@ -2,88 +2,83 @@
 }
 
 .files-wrap {
-  margin: auto;
-  width: min(55rem, 100% - 1rem);
-  min-height: 15rem;
-  padding: 1rem;
+	margin: auto;
+	width: var(--width_block);
+	min-height: 15rem;
+	padding: var(--base_padding);
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: var(--base_padding);
 }
 
 .files-in,
 .files-list,
 .files-out {
-  flex: 1 1 calc((100% / 3) - 2rem);
-  height: 15rem;
+	flex: 1 1 calc((100% / 3) - 2rem);
+	height: 15rem;
 }
 
 @media (min-width: 640px) {
-  .files-in,
-  .files-list,
-  .files-out {
-    flex-basis: calc((100% / 2) - 1rem); /* 2 across at tabletish */
-  }
+	.files-in,
+	.files-list,
+	.files-out {
+		flex-basis: calc((100% / 2) - 1rem); /* 2 across at tabletish */
+	}
 }
 @media (min-width: 1024px) {
-  .files-in,
-  .files-list,
-  .files-out {
-    flex-basis: calc((100% / 3) - 2rem); /* 3 across at desktop*/
-  }
+	.files-in,
+	.files-list,
+	.files-out {
+		flex-basis: calc((100% / 3) - 2rem); /* 3 across at desktop*/
+	}
 }
 
 .files-in__container,
 .files-list__container,
 .files-out__container {
-  height: 100%;
-  padding: 1rem;
-  /* border: 2px solid crimson; */
-  /* background-color: rgba(220, 20, 60, 0.151); */
-  /* border-radius: 10px; */
+	height: 100%;
+	padding: var(--base_padding);
+	/* border: 2px solid crimson; */
+	/* background-color: rgba(220, 20, 60, 0.151); */
+	/* border-radius: 10px; */
 
-  /* background: rgba(255, 113, 113, 0.05); */
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+	/* background: rgba(255, 113, 113, 0.05); */
 }
 
 .files-in__container {
-  cursor: grab;
+	cursor: grab;
 }
 .files-list__container {
-  overflow-y: auto;
+	overflow-y: auto;
 }
 .files-out__container {
-  overflow-y: auto;
+	overflow-y: auto;
 }
 
 .list__file,
 .links__link {
-  cursor: pointer;
-  /* cursor: alias; */
-  display: flex;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1rem;
-  font-weight: 100;
-  justify-content: space-between;
-  letter-spacing: -0.06rem;
-  /* padding: 0.1rem 0.5rem; */
+	cursor: pointer;
+	/* cursor: alias; */
+	display: flex;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 1rem;
+	font-weight: 100;
+	justify-content: space-between;
+	letter-spacing: -0.06rem;
+	/* padding: 0.1rem 0.5rem; */
 }
 
 .list__file i {
-  opacity: 0.5;
+	opacity: 0.5;
 }
-.links__link{
-  color: rgba(255, 0, 0, 0.5);
+.links__link {
+	color: var(--color_accent);
 }
-.links__link::before{
-  content: "Download";
+.links__link::before {
+	content: "Download";
 }
-.links__link::after{
-  /* content: "_"; */
+.links__link::after {
+	/* content: "_"; */
 }

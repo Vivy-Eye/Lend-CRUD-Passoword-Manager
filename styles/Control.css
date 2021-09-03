@@ -2,74 +2,63 @@
 }
 
 .control-wrap {
-  margin: auto;
-  width: min(55rem, 100% - 1rem);
-  height: 5rem;
-  padding: 1rem;
+	margin: auto;
+	width: var(--width_block);
+	height: 5rem;
+	padding: var(--base_padding);
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: var(--base_padding);
 }
 
 .control__btn-container {
-  flex: 1 1 calc((100% / 7) - 2rem);
+	flex: 1 1 calc((100% / 7) - 2rem);
 }
 
 @media (min-width: 640px) {
-  .control__btn-container {
-    flex-basis: calc((100% / 7) - 1rem); /* 2 across at tabletish */
-  }
+	.control__btn-container {
+		flex-basis: calc((100% / 7) - 1rem); /* 2 across at tabletish */
+	}
 }
 @media (min-width: 1024px) {
-  .control__btn-container {
-    flex-basis: calc((100% / 7) - 2rem); /* 3 across at desktop*/
-  }
+	.control__btn-container {
+		flex-basis: calc((100% / 7) - 2rem); /* 3 across at desktop*/
+	}
 }
 
 .control-wrap {
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17),
-    inset 0 8px 32px 0 rgba(31, 38, 135, 0.17);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 5px solid rgba(255, 255, 255, 0.18);
 }
 
 .control__btn-container {
-  display: flex;
-  align-items: center;
-  font-size: 0.8rem;
-
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 2px 4px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  user-select: none;
-  color: #9baacf;
-  border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
+	user-select: none;
+	color: var(--color_alt);
+	border: none;
 }
 .control__btn-container:active,
 .control__btn-container:focus {
-  box-shadow: inset 0 2px 4px 0 rgba(31, 38, 135, 0.37);
+	box-shadow: inset 0 2px 4px 0 rgba(31, 38, 135, 0.37);
 }
 
 .control__btn-create,
 .control__btn-search {
-  background-color: lavender;
+	color: var(--color);
+	background-color: var(--color_bg_accent_alt);
+	opacity: 0.9;
 }
 .control__btn-search {
-  border: none;
-  border-radius: 10px;
-  padding: 0 1rem;
-  display: block;
-  height: 100%;
+	border: none;
+	border-radius: 10px;
+	padding: 0 1rem;
+	display: block;
+	height: 100%;
 }
 .control__btn-search::placeholder {
-  color: #9baacf;
+	color: var(--color);
+	opacity: 1;
 }

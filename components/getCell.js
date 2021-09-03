@@ -7,13 +7,13 @@
  * @returns Object HTML
  */
 function getCell(name, value) {
-  const cell = document.createElement("span");
-  const fields = getCellFields({ name, value });
-  const buttons = getButtons("cell");
+	const cell = document.createElement("span");
+	const fields = getCellFields({ name, value });
+	const buttons = getButtons("cell");
 
-  cell.classList = "cell";
-  cell.append(fields);
-  cell.append(buttons);
+	cell.classList = "cell";
+	cell.append(fields);
+	cell.append(buttons);
 
-  return cell;
+	return cell;
 }

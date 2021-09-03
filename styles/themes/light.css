@@ -1,0 +1,8 @@
+.document {
+	--color: #121314;
+	--color_alt: #9baacf;
+	--color_accent: red;
+	--color_bg: ghostwhite;
+	--color_bg_accent: rgba(255, 0, 0, 0.5);
+	--color_bg_accent_alt: lavender;
+}

@@ -1,10 +1,17 @@
 .control-panel {
+	position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 5px;
+	z-index: 1;
+}
+.control-panel:hover .control-wrap{
+	background-color: var(--color_bg);
 }
 
 .control-wrap {
 	margin: auto;
-	width: var(--width_block);
-	height: 5rem;
+	width: calc(var(--width_block) - 2rem);
+	min-height: 5rem;
 	padding: var(--base_padding);
 
 	display: flex;

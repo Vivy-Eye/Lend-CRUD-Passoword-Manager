@@ -4,7 +4,7 @@
  * @param {String} place
  * @returns {Object HTML}
  */
-const makeButtonsFor = ({ place = "row" }) => {
+const makeButtonsFor = (place = "row") => {
 	const //
 		cr = (str) => document.createElement(str),
 		ev = (obj, ev) => obj.addEventListener("click", ev, false),
@@ -21,8 +21,8 @@ const makeButtonsFor = ({ place = "row" }) => {
 	setText(add, "+");
 	setText(del, "-");
 
-	// ev(add, addTableEl);
-	// ev(del, dellTableEl);
+	ev(add, handler_addTableEl);
+	ev(del, handler_dellTableEl);
 
 	Buttons.append(add);
 	Buttons.append(del);
@@ -82,7 +82,7 @@ const makeRow = ({ row_obj }) => {
 
 	try {
 		// Try add cells and buttons in row
-		Row.classList = "row";
+		Row.classList = "row glassmorphism-base";
 		Row.append(Buttons);
 
 		for (let name in row_obj) {
@@ -92,6 +92,7 @@ const makeRow = ({ row_obj }) => {
 				cell_obj = { cell_name, cell_value },
 				Cell = makeCell(cell_obj);
 
+			Row["attr-tag"] += ` ${cell_name} ${cell_value}`;
 			Row.append(Cell);
 		}
 	} catch (error) {
@@ -117,6 +118,8 @@ function makeTable({ database }) {
 	} catch (error) {
 		console.info(error);
 	}
+
+	Table.classList = "table-wrap";
 
 	return Table;
 }

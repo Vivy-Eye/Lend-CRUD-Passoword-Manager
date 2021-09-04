@@ -1,40 +1,105 @@
-.table-container{
-  min-height: 30vh;
+/*
+	> States
+*/
+.tc-s-cell_hide_values .cell__value {
+	color: transparent;
+}
+.tc-s-cell_hide_values .cell__value::selection {
+	background-color: var(--color_alt);
+	border-radius: 1rem;
 }
 
-/* .table-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-
-  padding: 1rem;
-  max-width: 100%;
+.tc-s-cell_no_editing .cell,
+.tc-s-cell_no_editing .cell input {
+	cursor: default;
+	background-color: transparent;
+	border-color: transparent;
+}
+.tc-s-cell_no_editing .cell__btn-del,
+.tc-s-cell_no_editing .cell__btn-add,
+.tc-s-cell_no_editing .row__btn-del,
+.tc-s-cell_no_editing .row__btn-add {
+	visibility: hidden;
 }
 
-.hide_cells_values .cell__value {
-  color: transparent;
+.tc-s-row_hide {
+	display: none;
 }
 
-.no_editing .cell input {
-  cursor: default;
-  background-color: #00000000;
-  border: none;
-  border-bottom: 1px solid black;
+/*
+	> Table
+*/
+.table-container {
+	min-height: 20vh;
+	--cell-width: 100%;
+	--row-width: min(12rem, 100% - 1rem);
+	--table-buttons-size: 1.5rem;
 }
-.no_editing .cell .cell__i-dell,
-.no_editing .cell .cell__i-add,
-.no_editing .row .row__i-dell,
-.no_editing .row .row__i-add {
-  visibility: hidden;
-} */
+.table-wrap {
+	margin: auto;
+	width: var(--width_block);
+	padding: var(--base_padding);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--base_padding);
+}
 
-/* default */
-/* .no_editing textarea[readonly="readonly"],
-.no_editing textarea[readonly] {
-  background-color: tomato;
-} */
-
-/* input[type="text"]:read-only:not([read-only="true"]) {
-  color: blue;
-} */
+/*
+	> Row
+*/
+.row {
+	flex: 1 1 calc((100% / 4) - 2rem);
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 10px 10px 10px 0;
+}
+.row__buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.row__btn-add,
+.row__btn-del {
+	height: var(--table-buttons-size);
+	width: var(--table-buttons-size);
+	background-color: transparent;
+	border: none;
+	color: var(--color_accent);
+}
+/*
+	> Cell
+*/
+.cell {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--color_alt);
+	background-color: var(--color_bg_accent_alt);
+}
+.cell__fields {
+	padding: 0 var(--base_padding);
+	width: 100%;
+}
+.cell__name,
+.cell__value {
+	width: 100%;
+	height: calc(100% / 2);
+	background-color: transparent;
+	border: none;
+}
+.cell__name {
+	opacity: 0.5;
+}
+.cell__buttons {
+	width: var(--table-buttons-size);
+}
+.cell__btn-add,
+.cell__btn-del {
+	height: var(--table-buttons-size);
+	width: var(--table-buttons-size);
+	background-color: transparent;
+	border: none;
+	color: var(--color);
+}

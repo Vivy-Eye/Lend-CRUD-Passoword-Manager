@@ -1,24 +1,19 @@
 "use strict";
 
-function searchInTable({ string = "", Container = document }) {
+/**
+ * @param {String} query
+ * @param {Object HTML} Container
+ */
+const searchInTable = ({ query = "", Container = document }) => {
 	const Rows = Container.querySelectorAll(".row");
 
 	Rows.forEach((Row) => {
-		const Cells = Row.querySelectorAll(".cell");
+		const //
+			tags = Row["attr-tag"].toLocaleLowerCase(),
+			query_low = query.toLocaleLowerCase(),
+			bool = tags.includes(query_low);
 
-		for (let i = 0; Cells.length > i; i++) {
-			const Cell = Cells[i];
-			const val = (sel) => Cell.querySelector(sel).value.toLocaleLowerCase();
-			const Value = val(".cell__value");
-			const Name = val(".cell__name");
-			const bool = Name.includes(string) || Value.includes(string);
-
-			if (bool) {
-				Row.style.display = "";
-				break;
-			} else {
-				Row.style.display = "none";
-			}
-		}
+		bool || (Row.style.display = "none"); // false
+		bool && (Row.style.display = ""); // true
 	});
-}
+};

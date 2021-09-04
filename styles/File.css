@@ -57,8 +57,7 @@
 	overflow-y: auto;
 }
 
-.list__file,
-.links__link {
+.file-container-element {
 	cursor: pointer;
 	/* cursor: alias; */
 	display: flex;
@@ -69,16 +68,9 @@
 	letter-spacing: -0.06rem;
 	/* padding: 0.1rem 0.5rem; */
 }
-
-.list__file i {
+.file_size i {
 	opacity: 0.5;
 }
-.links__link {
+.file_name {
 	color: var(--color_accent);
-}
-.links__link::before {
-	content: "Download";
-}
-.links__link::after {
-	/* content: "_"; */
 }

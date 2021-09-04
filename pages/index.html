@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="document">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>CRID THE REACTIVE APP</title>
+		<title>CRID THE REACTIVE APP</title>
 
-    <link rel="icon" href="/public/favicon/icon1.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/styles/index.css" />
+		<link rel="icon" href="../public/favicon/icon1.png" type="image/x-icon" />
+		<link rel="stylesheet" href="../styles/themes/light.css" />
+		<link rel="stylesheet" href="../styles/index.css" />
 
-    <!-- <style>
+		<link rel="stylesheet" href="../styles/Noscript.css" />
+		<link rel="stylesheet" href="../styles/Home.css" />
+		<link rel="stylesheet" href="../styles/File.css" />
+		<link rel="stylesheet" href="../styles/Control.css" />
+		<link rel="stylesheet" href="../styles/Container.css" />
+
+		<script src="../lib/api.js"></script>
+		<!-- <script defer src="../lib/constants.js"></script> -->
+
+		<!-- <style>
       .is-script {
         display: none;
       }
@@ -20,150 +30,141 @@
         '<style type="text/css">.noscript{display:none}.is-script{display:inherit}</style>'
       );
     </script> -->
-  </head>
+	</head>
 
-  <body class="container">
-    <noscript class="noscript">
-      <div class="noscript__wrap">
-        <h2 class="noscript__title title">
-          Your browser does not support JavaScript!
-        </h2>
-        <p class="noscript__text text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="noscript__text text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Scelerisque felis imperdiet proin fermentum leo.
-        </p>
-      </div>
-      <link rel="stylesheet" href="/styles/Noscript.css" />
-    </noscript>
+	<body class="container">
+		<noscript class="noscript" id="noscript">
+			<div class="noscript__wrap">
+				<h2 class="noscript__title title">
+					Your browser does not support JavaScript!
+				</h2>
+				<p class="noscript__text text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<p class="noscript__text text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Scelerisque felis imperdiet proin fermentum leo.
+				</p>
+			</div>
+		</noscript>
 
-    <div class="home" id="home">
-      <div class="home__wrap">
-        <h2 class="home__title title">
-          CRID THE <i class="home-red">R</i>EACTIVE APP
-        </h2>
-        <h2 class="home__subtitle title">
-          is the best way to manage static data
-        </h2>
-        <p class="home__text text">
-          Visit the
-          <a href="/pages/demo.html" class="home-link">Demo Page</a> and the
-          <a href="/" class="home-link">Main Page</a>
-        </p>
-        <!-- <h2 class="home__subtitle title">Why?</h2>
+		<section class="home" id="home">
+			<div class="home__wrap">
+				<h1 class="home__title title">
+					CRID THE <i class="home-red">R</i>EACTIVE APP
+				</h1>
+				<small class="home__subtitle title">
+					is the best way to manage static data
+				</small>
+				<p class="home__text text">
+					Visit the
+					<a href="/pages/demo.html" class="home-link">Demo Page</a>
+					and the
+					<a href="/" class="home-link">Main Page</a>
+				</p>
+				<!-- <h2 class="home__subtitle title">Why?</h2>
         <p class="home__text text"></p> -->
-      </div>
-      <link rel="stylesheet" href="/styles/Home.css" />
-    </div>
+			</div>
+		</section>
 
-    <div class="crid-table" id="crid-table">
-      <div class="files-container" id="files-container">
-        <div class="files-wrap">
-          <div class="files-in">
-            <div class="files-in__container">
-              <input
-                type="file"
-                multiple
-                class="files__in-btn dropper_btn_file"
-              />
-            </div>
-          </div>
+		<section class="crid-table" id="crid-table">
+			<div class="files-container">
+				<div class="files-wrap">
+					<div class="files-in glassmorphism-base">
+						<div class="files-in__container">
+							<input type="file" multiple class="files__in-btn" />
+						</div>
+					</div>
 
-          <div class="files-list">
-            <div class="files-list__container files_list"></div>
-          </div>
+					<div class="files-list">
+						<div class="files-list__container glassmorphism-base"></div>
+					</div>
 
-          <div class="files-out links">
-            <div class="files-out__container files_links"></div>
-          </div>
-        </div>
+					<div class="files-out links">
+						<div class="files-out__container glassmorphism-base"></div>
+					</div>
+				</div>
+			</div>
 
-        <script src="/components/Stor.js"></script>
-        <script src="/components/addFileTable.js"></script>
-        <script src="/components/addFile.js"></script>
-        <script src="/components/readSaveFile.js"></script>
-        <script src="/components/readFiles.js"></script>
-        <script src="/components/Files.js"></script>
-        <link rel="stylesheet" href="/styles/File.css" />
-      </div>
+			<div class="control-panel">
+				<div class="control-wrap glassmorphism-0">
+					<label class="control__btn-container glassmorphism-1">
+						<input
+							type="search"
+							autocomplete
+							autofocus
+							class="control__btn-search"
+							placeholder="🔍 Search ..."
+							list="search_values"
+							maxlength="120"
+						/>
+						<datalist id="search_values">
+							<optgroup>
+								<option>Gmail</option>
+							</optgroup>
+							<!-- <optgroup></optgroup> -->
+						</datalist>
+					</label>
 
-      <div class="control-panel" id="control-panel">
-        <div class="control-wrap">
-          <label class="control__btn-container">
-            <input
-              type="search"
-              autocomplete
-              autofocus
-              class="control__btn-search"
-              placeholder="🔍 Search ..."
-              list="search_values"
-              maxlength="120"
-            />
-            <datalist id="search_values">
-              <optgroup>
-                <option>Gmail</option>
-              </optgroup>
-              <!-- <optgroup></optgroup> -->
-            </datalist>
-          </label>
+					<button
+						class="control__btn-container control__btn-add glassmorphism-1"
+					>
+						Add Row
+					</button>
 
-          <button class="control__btn-container control__btn-add">
-            ✏️ Add Row
-          </button>
+					<button
+						class="
+							control__btn-container control__btn-delete-table
+							glassmorphism-1
+						"
+					>
+						Delete table
+					</button>
 
-          <button class="control__btn-container control__btn-delete-table">
-            📃 Delete table
-          </button>
+					<button
+						class="
+							control__btn-container control__btn-delete-files
+							glassmorphism-1
+						"
+					>
+						Delete files
+					</button>
 
-          <button class="control__btn-container control__btn-delete-files">
-            📃 Delete files
-          </button>
+					<label class="control__btn-container glassmorphism-1">
+						<input type="checkbox" checked class="control__btn-hide" />
+						<span> Hide values</span>
+					</label>
 
-          <label class="control__btn-container">
-            <input type="checkbox" checked class="control__btn-hide" />
-            <span> Hide values</span>
-          </label>
+					<label class="control__btn-container glassmorphism-1">
+						<input type="checkbox" class="control__btn-edit" />
+						<span>Enable editing</span>
+					</label>
 
-          <label class="control__btn-container">
-            <input type="checkbox" class="control__btn-edit" />
-            <span>Enable editing</span>
-          </label>
+					<button
+						class="control__btn-container control__btn-create glassmorphism-1"
+					>
+						Create File
+					</button>
+				</div>
+			</div>
 
-          <button class="control__btn-container control__btn-create">
-            💾 Create File
-          </button>
-        </div>
+			<div
+				class="table-container tc-s-cell_hide_values tc-s-cell_no_editing"
+			></div>
 
-        <script src="/components/toggleTableEditing.js"></script>
-        <script src="/components/toggleClassValue.js"></script>
-        <script src="/components/searchInTable.js"></script>
-        <script src="/components/getLinkOnFile.js"></script>
-        <script defer src="/components/Control.js"></script>
-
-        <link rel="stylesheet" href="/styles/Control.css" />
-      </div>
-
-      <div
-        class="table-container tc-s-cell_hide_values tc-s-cell_no_editing"
-        id="table-container"
-      >
-        <script src="/components/getButtons.js"></script>
-        <script src="/components/Model.js"></script>
-        <script src="/components/getCellFields.js"></script>
-        <script src="/components/getCell.js"></script>
-        <script src="/components/getRow.js"></script>
-        <script src="/components/getTable.js"></script>
-        <link rel="stylesheet" href="/styles/Container.css" />
-      </div>
-    </div>
-  </body>
+			<script src="../components/readFile.js"></script>
+			<script src="../components/makeTable.js"></script>
+			<script src="../components/makeFileContainer.js"></script>
+			<script src="../components/makeFileUrl.js"></script>
+			<script src="../components/searchInTable.js"></script>
+			<script src="../components/Handlers.js"></script>
+		</section>
+	</body>
 </html>

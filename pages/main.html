@@ -87,32 +87,42 @@
 		</noscript>
 
 		<div class="page-settings" id="page-settings">
-			<fieldset class="switcher">
-				<legend class="switcher__legend">Схема</legend>
-				<input
-					class="switcher__radio switcher__radio--light"
-					type="radio"
-					name="color-scheme"
-					value="light"
-					aria-label="Светлая"
-				/>
-				<input
-					class="switcher__radio switcher__radio--auto"
-					type="radio"
-					name="color-scheme"
-					value="auto"
-					aria-label="Системная"
-					checked
-				/>
-				<input
-					class="switcher__radio switcher__radio--dark"
-					type="radio"
-					name="color-scheme"
-					value="dark"
-					aria-label="Тёмная"
-				/>
-				<div class="switcher__status"></div>
-			</fieldset>
+			<div>
+				<fieldset class="switcher">
+					<legend class="switcher__legend">Схема</legend>
+					<input
+						class="switcher__radio switcher__radio--light"
+						type="radio"
+						name="color-scheme"
+						value="light"
+						aria-label="Светлая"
+					/>
+					<input
+						class="switcher__radio switcher__radio--auto"
+						type="radio"
+						name="color-scheme"
+						value="auto"
+						aria-label="Системная"
+						checked
+					/>
+					<input
+						class="switcher__radio switcher__radio--dark"
+						type="radio"
+						name="color-scheme"
+						value="dark"
+						aria-label="Тёмная"
+					/>
+					<div class="switcher__status"></div>
+				</fieldset>
+			</div>
+			<span class="page-links">
+				<a
+					class="page_links link"
+					href="https://github.com/a-p-i-s/CRID-Password-Manager"
+				>
+					Code
+				</a>
+			</span>
 			<script src="../components/scheme-switcher.js"></script>
 		</div>
 
@@ -126,9 +136,9 @@
 				</small>
 				<p class="home__text text">
 					Visit the
-					<a href="/pages/demo.html" class="home-link">Demo Page</a>
+					<a href="/pages/demo.html" class="home-link link">Demo Page</a>
 					and the
-					<a href="/" class="home-link">Main Page</a>
+					<a href="/" class="home-link link">Main Page</a>
 				</p>
 				<!-- <h2 class="home__subtitle title">Why?</h2>
         <p class="home__text text"></p> -->
@@ -204,7 +214,7 @@
 					</label>
 
 					<label class="control__btn-container glassmorphism-1">
-						<input type="checkbox" class="control__btn-edit" />
+						<input type="checkbox" checked class="control__btn-edit" />
 						<span>Enable editing</span>
 					</label>
 
@@ -216,16 +226,14 @@
 				</div>
 			</div>
 
-			<div
-				class="table-container tc-s-cell_hide_values tc-s-cell_no_editing"
-			></div>
+			<div class="table-container tc-s-cell_hide_values"></div>
 
 			<script src="../components/readFile.js"></script>
 			<script src="../components/makeTable.js"></script>
 			<script src="../components/makeFileContainer.js"></script>
 			<script src="../components/makeFileUrl.js"></script>
 			<script src="../components/searchInTable.js"></script>
-			<script src="../components/Handlers.js"></script>
+			<script src="../components/main/Handlers.js"></script>
 		</section>
 	</body>
 </html>

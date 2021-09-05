@@ -68,8 +68,9 @@
 	letter-spacing: -0.06rem;
 	/* padding: 0.1rem 0.5rem; */
 }
-.file_size i {
+.file_size {
 	opacity: 0.5;
+	color: var(--color);
 }
 .file_name {
 	color: var(--color_accent);

@@ -5,7 +5,7 @@
 	color: transparent;
 }
 .tc-s-cell_hide_values .cell__value::selection {
-	background-color: var(--color_alt);
+	background-color: var(--color_bg_accent_alt);
 	border-radius: 1rem;
 }
 
@@ -50,10 +50,20 @@
 	> Row
 */
 .row {
-	flex: 1 1 calc((100% / 4) - 2rem);
+	flex: 1 1 calc((100% / 2) - 2rem);
 	display: flex;
 	flex-wrap: wrap;
 	border-radius: 10px 10px 10px 0;
+}
+@media (min-width: 640px) {
+	.row {
+		flex: 1 1 calc((100% / 3) - 2rem);
+	}
+}
+@media (min-width: 1024px) {
+	.row {
+		flex: 1 1 calc((100% / 4) - 2rem);
+	}
 }
 .row__buttons {
 	width: 100%;
@@ -88,6 +98,7 @@
 	height: calc(100% / 2);
 	background-color: transparent;
 	border: none;
+	color: var(--color);
 }
 .cell__name {
 	opacity: 0.5;

@@ -37,6 +37,7 @@ const makeButtonsFor = (place = "row") => {
  */
 const makeCellFields = ({ cell_name, cell_value }) => {
 	const //
+		ev = (obj, ev) => obj.addEventListener("click", ev, false),
 		CellFields = document.createElement("div"),
 		Ina = document.createElement("input"),
 		Iva = document.createElement("input");
@@ -47,8 +48,11 @@ const makeCellFields = ({ cell_name, cell_value }) => {
 	[Ina.type, Iva.type] = ["text", "text"];
 	[Ina.maxLength, Iva.maxLength] = [120, 120];
 	[Ina.value, Iva.value] = [cell_name, cell_value];
-	[Ina.readOnly, Iva.readOnly] = [true, true];
+	// [Ina.readOnly, Iva.readOnly] = [true, true];
 	[Ina, Iva].map((input) => CellFields.append(input));
+
+	ev(Ina, handler_autocopy);
+	ev(Iva, handler_autocopy);
 
 	return CellFields;
 };

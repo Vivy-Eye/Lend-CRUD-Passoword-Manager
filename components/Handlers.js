@@ -50,7 +50,7 @@ function handler_searchInTable() {
 	const q = {
 		query: this.value,
 		Container: TableContainer,
-	}
+	};
 	searchInTable(q);
 }
 
@@ -96,29 +96,30 @@ function handler_editing() {
 }
 
 function handler_addTableEl() {
-	let NewElement;
+	let NewEl;
 	const //
-		template = {},
 		Pa = GetPa(this, 2),
+		row_obj = {},
 		Cells = Pa.querySelectorAll(".cell");
 
 	if (Cells.length) {
 		Cells.forEach((Cell) => {
 			const //
-				_ = (str) => Cell.querySelector(str).value || "",
-				cell_name = _("input.cell__name"),
-				cell_value = _("input.cell__value");
+				_ = (selector) => Cell.querySelector(selector).value || "",
+				name = _("input.cell__name"),
+				value = _("input.cell__value");
 
-			template[cell_name] = cell_value;
+			row_obj[name] = value;
 		});
-		NewElement = makeRow(template);
+		NewEl = makeRow({ row_obj });
 	}
 	if (!Cells.length) {
-		NewElement = makeCell("", "");
+		const cell_name = "";
+		const cell_value = "";
+		NewEl = makeCell({ cell_name, cell_value });
 	}
 
-	console.info(NewElement);
-	Pa.insertAdjacentElement("afterend", NewElement);
+	Pa.insertAdjacentElement("afterend", NewEl);
 }
 
 function handler_dellTableEl() {

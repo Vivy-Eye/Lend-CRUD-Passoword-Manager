@@ -1,3 +1,6 @@
 static-tests-images/
 .vscode/
-.hide
+.hide/
+sandbox/
+tests/
+temp/

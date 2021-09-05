@@ -59,18 +59,36 @@
 .glassmorphism-base,
 .glassmorphism-0,
 .glassmorphism-1 {
-	/* background: rgba(255, 255, 255, 0.75); */
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+	/* background: rgba(255, 255, 255, 0.75); rgba(31, 38, 135, 0.2)*/
+	box-shadow: 0 8px 32px 0 var(--color_bg_accent_alt);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	border: 2px solid var(--color_bg_accent_alt);
 }
 .glassmorphism-0 {
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17),
-		inset 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+	box-shadow: 0 8px 32px 0 var(--color_bg_accent_alt),
+		inset 0 8px 32px 0 var(--color_bg_accent_alt);
 	border-width: 5px;
 }
-.glassmorphism-1 {
-	box-shadow: 0 2px 4px 0 rgba(31, 38, 135, 0.37);
+
+.link {
+	text-decoration: none;
+	color: var(--color);
+	position: relative;
+	margin: 0.5rem;
+}
+.link:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 60%;
+	left: -0.1em;
+	right: -0.1em;
+	bottom: 0;
+	transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+	background-color: var(--color_bg_accent);
+}
+.link:hover::after {
+	top: 0;
 }

@@ -5,7 +5,7 @@
 	color: transparent;
 }
 .tc-s-cell_hide_values .cell__value::selection {
-	background-color: var(--color_bg_accent_alt);
+	background-color: var(--color_bg_accent);
 	border-radius: 1rem;
 }
 

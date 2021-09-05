@@ -1,6 +1,6 @@
 "use strict";
 
-const TableContainer = document.querySelector(".table-container");
+const TableContainer = document.querySelector(".table-wrap");
 const FilesListContainer = document.querySelector(".files-list__container");
 const FilesOutContainer = document.querySelector(".files-out__container");
 
@@ -65,9 +65,14 @@ function handler_createFile() {
 }
 
 function handler_addRow() {
-	const database = [{ "": "" }];
-	const t = makeTable({ database });
-	t && TableContainer.append(t);
+	const //
+		name = `Name ${MD5(getRandomInt())[0]}${getRandomInt()}`,
+		value = MD5(Math.random()),
+		database = [{ [name]: value }],
+		Table = makeTable({ database }),
+		Rows = Table.querySelectorAll(".row");
+
+	Rows.forEach((Row) => TableContainer.append(Row));
 }
 
 function handler_delTable() {
@@ -98,6 +103,11 @@ function handler_editing() {
 function handler_addTableEl() {
 	let NewEl;
 	const //
+		getInpV = (str, pa) => pa.querySelector("input.cell__" + str).value,
+		getAltName = () => `Name ${MD5(getRandomInt())[0]}${getRandomInt()}`,
+		getAltValue = () => MD5(getRandomInt()),
+		getName = (pa) => getInpV("name", pa) || getAltName(),
+		getValue = (pa) => getInpV("value", pa) || getAltValue(),
 		Pa = GetPa(this, 2),
 		row_obj = {},
 		Cells = Pa.querySelectorAll(".cell");
@@ -105,17 +115,17 @@ function handler_addTableEl() {
 	if (Cells.length) {
 		Cells.forEach((Cell) => {
 			const //
-				_ = (selector) => Cell.querySelector(selector).value || "",
-				name = _("input.cell__name"),
-				value = _("input.cell__value");
+				cell_name = getName(Cell),
+				cell_value = getValue(Cell);
 
-			row_obj[name] = value;
+			row_obj[cell_name] = cell_value;
 		});
 		NewEl = makeRow({ row_obj });
 	}
 	if (!Cells.length) {
-		const cell_name = "";
-		const cell_value = "";
+		const //
+			cell_name = getName(Pa),
+			cell_value = getValue(Pa);
 		NewEl = makeCell({ cell_name, cell_value });
 	}
 

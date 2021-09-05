@@ -126,6 +126,11 @@ function handler_dellTableEl() {
 	GetPa(this, 2).remove();
 }
 
+function handler_autocopy() {
+	this.select();
+	// document.execCommand("copy");
+}
+
 (() => {
 	// Add handlers to buttons
 	const //

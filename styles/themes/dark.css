@@ -1,22 +1,22 @@
 .document {
-	--color: #121314;
-	--color_alt: #9baacf;
+	--color: ghostwhite;
+	--color_alt: #000000;
 	--color_accent: red;
-	--color_bg: ghostwhite;
+	--color_bg: #121314;
 	--color_bg_accent: rgba(255, 0, 0, 0.5);
-	--color_bg_accent_alt: lavender;
+	--color_bg_accent_alt: #011c38;
 }
 
 /* Switcher */
 
 .switcher__radio {
-	filter: invert(0);
-}
-
-.switcher__radio:checked {
 	filter: invert(1);
 }
 
-.switcher__status {
+.switcher__radio:checked {
 	filter: invert(0);
+}
+
+.switcher__status {
+	filter: invert(1);
 }

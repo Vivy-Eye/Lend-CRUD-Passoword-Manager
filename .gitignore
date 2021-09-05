@@ -1,6 +1,11 @@
-static-tests-images/
-.vscode/
+#
+node_modules
+.vscode
+*.env
+
+#
 .hide/
+static-tests-images/
 sandbox/
 tests/
 temp/

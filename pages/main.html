@@ -6,39 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="color-scheme" content="light dark" />
 		<meta
-			name="theme-color"
-			media="(prefers-color-scheme: light)"
 			content="#c7cbcc"
+			media="(prefers-color-scheme: light)"
+			name="theme-color"
 		/>
 		<meta
-			name="theme-color"
-			media="(prefers-color-scheme: dark)"
 			content="#273a43"
+			media="(prefers-color-scheme: dark)"
+			name="theme-color"
 		/>
 
 		<title>CRID THE REACTIVE APP</title>
 
 		<link rel="icon" href="../public/favicon/icon1.png" type="image/x-icon" />
 		<link
-			rel="stylesheet"
 			href="../styles/themes/light.css"
 			media="(prefers-color-scheme: light)"
+			rel="stylesheet"
 		/>
 		<link
-			rel="stylesheet"
 			href="../styles/themes/dark.css"
 			media="(prefers-color-scheme: dark)"
+			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="../styles/index.css" />
 
-		<link rel="stylesheet" href="../styles/PageSettings.css" />
-		<link rel="stylesheet" href="../styles/Noscript.css" />
-		<link rel="stylesheet" href="../styles/Home.css" />
-		<link rel="stylesheet" href="../styles/File.css" />
-		<link rel="stylesheet" href="../styles/Control.css" />
 		<link rel="stylesheet" href="../styles/Container.css" />
+		<link rel="stylesheet" href="../styles/Control.css" />
+		<link rel="stylesheet" href="../styles/File.css" />
+		<link rel="stylesheet" href="../styles/Home.css" />
+		<link rel="stylesheet" href="../styles/Noscript.css" />
+		<link rel="stylesheet" href="../styles/PageSettings.css" />
+		<link rel="stylesheet" href="../styles/searchButton.css" />
 
 		<script src="../lib/api.js"></script>
+		<script async src="../lib/md5.js"></script>
+		<script async src="../lib/readFile.js"></script>
+		<script async src="../lib/makeFileUrl.js"></script>
 		<!-- <script defer src="../lib/constants.js"></script> -->
 
 		<script>
@@ -61,6 +65,12 @@
         '<style type="text/css">.noscript{display:none}.is-script{display:inherit}</style>'
       );
     </script> -->
+
+		<script asunc src="../app/getTableDataBase.js"></script>
+		<script async src="../app/makeFileContainer.js"></script>
+		<script async src="../app/makeTable.js"></script>
+		<script async src="../app/searchInTable.js"></script>
+		<script defer src="../app/main/Handlers.js"></script>
 	</head>
 
 	<body class="container">
@@ -123,7 +133,7 @@
 					Code
 				</a>
 			</span>
-			<script src="../components/scheme-switcher.js"></script>
+			<script src="../app/scheme-switcher.js"></script>
 		</div>
 
 		<section class="home" id="home">
@@ -166,15 +176,22 @@
 
 			<div class="control-panel">
 				<div class="control-wrap glassmorphism-0">
+					<!-- <label>
+						<input id="search-box" type="text" class="search-box" name="q" />
+						<label for="search-box"
+							><span class="glyphicon glyphicon-search search-icon"></span
+						></label>
+						<input type="submit" id="search-submit" />
+					</label> -->
 					<label class="control__btn-container glassmorphism-1">
 						<input
-							type="search"
 							autocomplete
 							autofocus
 							class="control__btn-search"
-							placeholder="🔍 Search ..."
 							list="search_values"
 							maxlength="120"
+							placeholder="🔍 Search ..."
+							type="search"
 						/>
 						<datalist id="search_values">
 							<optgroup>
@@ -229,14 +246,6 @@
 			<div class="table-container">
 				<div class="table-wrap tc-s-cell_hide_values"></div>
 			</div>
-
-			<script async src="../components/md5.js"></script>
-			<script src="../components/readFile.js"></script>
-			<script src="../components/makeTable.js"></script>
-			<script src="../components/makeFileContainer.js"></script>
-			<script src="../components/makeFileUrl.js"></script>
-			<script src="../components/searchInTable.js"></script>
-			<script src="../components/main/Handlers.js"></script>
 		</section>
 	</body>
 </html>

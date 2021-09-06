@@ -76,7 +76,18 @@
 	width: var(--table-buttons-size);
 	background-color: transparent;
 	border: none;
-	color: var(--color_accent);
+	/* color: var(--color_accent); */
+	color: transparent;
+
+	background-position: center center;
+	background-size: 1rem;
+	background-repeat: no-repeat;
+}
+.row__btn-add{
+	background-image: url("../public/favicon/icons8-add-64.png");
+}
+.row__btn-del{
+	background-image: url("../public/favicon/icons8-delete-64.png");
 }
 /*
 	> Cell

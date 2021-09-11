@@ -35,10 +35,22 @@
 	}
 }
 
+.files__inp-in,
+.files__btn-delete,
+.files__btn-create {
+	display: block;
+	margin: auto;
+
+	color: var(--color);
+	background-color: var(--color_bg);
+	border: none;
+	padding: calc(var(--base_padding) / 2);
+}
+
 .files-in__container,
 .files-list__container,
 .files-out__container {
-	height: 100%;
+	height: calc(100% - 2rem);
 	padding: var(--base_padding);
 	/* border: 2px solid crimson; */
 	/* background-color: rgba(220, 20, 60, 0.151); */
@@ -50,9 +62,7 @@
 .files-in__container {
 	cursor: grab;
 }
-.files-list__container {
-	overflow-y: auto;
-}
+.files-list__container,
 .files-out__container {
 	overflow-y: auto;
 }

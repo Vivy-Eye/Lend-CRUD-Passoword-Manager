@@ -12,6 +12,6 @@ is the best way to manage static data
 - Locally
 - Convenirntly
 
-* [Components]("./components/README.md")
+* [App]("./app/README.md")
+* [Lib]("./lib/README.md")
 * [Styles]("./styles/README.md")
-* [Tests]("./tests/README.md")

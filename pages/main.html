@@ -37,7 +37,6 @@
 		<link rel="stylesheet" href="../styles/Home.css" />
 		<link rel="stylesheet" href="../styles/Noscript.css" />
 		<link rel="stylesheet" href="../styles/PageSettings.css" />
-		<link rel="stylesheet" href="../styles/searchButton.css" />
 
 		<script src="../lib/api.js"></script>
 		<script async src="../lib/md5.js"></script>
@@ -155,49 +154,47 @@
 			</div>
 		</section>
 
-		<section class="crid-table" id="crid-table">
+		<div class="crid-table" id="crid-table">
 			<div class="files-container">
+				<!-- Files -->
 				<div class="files-wrap">
 					<div class="files-in glassmorphism-base">
-						<div class="files-in__container">
-							<input type="file" multiple class="files__in-btn" />
-						</div>
+						<!-- Files in -->
+						<input type="file" multiple class="files__inp-in" />
+						<div class="files-in__container"></div>
 					</div>
 
-					<div class="files-list">
-						<div class="files-list__container glassmorphism-base"></div>
+					<div class="files-list glassmorphism-base">
+						<!-- Files list -->
+						<button class="files__btn-delete">Delete files</button>
+						<div class="files-list__container"></div>
 					</div>
 
-					<div class="files-out links">
-						<div class="files-out__container glassmorphism-base"></div>
+					<div class="files-out links glassmorphism-base">
+						<!-- Files out -->
+						<button class="files__btn-create">Create File</button>
+						<div class="files-out__container"></div>
 					</div>
 				</div>
 			</div>
 
 			<div class="control-panel">
 				<div class="control-wrap glassmorphism-0">
-					<!-- <label>
-						<input id="search-box" type="text" class="search-box" name="q" />
-						<label for="search-box"
-							><span class="glyphicon glyphicon-search search-icon"></span
-						></label>
-						<input type="submit" id="search-submit" />
-					</label> -->
-					<label class="control__btn-container glassmorphism-1">
+					<label
+						class="glassmorphism-1"
+					>
 						<input
 							autocomplete
-							autofocus
 							class="control__btn-search"
 							list="search_values"
 							maxlength="120"
-							placeholder="🔍 Search ..."
+							placeholder="🔍"
 							type="search"
 						/>
 						<datalist id="search_values">
 							<optgroup>
 								<option>Gmail</option>
 							</optgroup>
-							<!-- <optgroup></optgroup> -->
 						</datalist>
 					</label>
 
@@ -216,15 +213,6 @@
 						Delete table
 					</button>
 
-					<button
-						class="
-							control__btn-container control__btn-delete-files
-							glassmorphism-1
-						"
-					>
-						Delete files
-					</button>
-
 					<label class="control__btn-container glassmorphism-1">
 						<input type="checkbox" checked class="control__btn-hide" />
 						<span> Hide values</span>
@@ -234,18 +222,12 @@
 						<input type="checkbox" checked class="control__btn-edit" />
 						<span>Enable editing</span>
 					</label>
-
-					<button
-						class="control__btn-container control__btn-create glassmorphism-1"
-					>
-						Create File
-					</button>
 				</div>
 			</div>
 
 			<div class="table-container">
 				<div class="table-wrap tc-s-cell_hide_values"></div>
 			</div>
-		</section>
+		</div>
 	</body>
 </html>

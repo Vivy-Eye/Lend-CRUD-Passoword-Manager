@@ -74,14 +74,22 @@ function handler_onSearchInput() {
 function handler_onBtnCreateFile() {
 	try {
 		const //
-			database = getTableDataBase(),
-			url = makeFileUrl(database),
-			name = prompt("Name") || Math.random().toString(16),
-			file = { name: name, link: url },
-			File = makeFileContainer(file);
+			tableData = { place: TableContainer },
+			database = getTableDataBase(tableData);
 
-		// Add download file link on page
-		FilesOutContainer.append(File);
+		if (database.length) {
+			const //
+				randomName = Math.random().toString(16),
+				url = makeFileUrl(database),
+				name = prompt("Enter file name") || randomName,
+				file = { name: name, link: url },
+				File = makeFileContainer(file);
+
+			FilesOutContainer.append(File);
+		} else {
+			const alertText = "Table is null\n\nPlease, add rows in table";
+			alert(alertText);
+		}
 	} catch (error) {
 		console.info("File is not created");
 		console.info(error);
@@ -209,12 +217,12 @@ function handler_autocopy() {
 	const //
 		get = (str) => document.querySelector(str),
 		ev = (obj, fu, ev = "click") => obj.addEventListener(ev, fu, false),
-		file = get(".files__in-btn"),
+		file = get(".files__inp-in"),
+		create = get(".files__btn-create"),
+		delFiles = get(".files__btn-delete"),
 		search = get(".control__btn-search"),
 		addRow = get(".control__btn-add"),
-		create = get(".control__btn-create"),
 		delTable = get(".control__btn-delete-table"),
-		delFiles = get(".control__btn-delete-files"),
 		hideVal = get(".control__btn-hide"),
 		edit = get(".control__btn-edit");
 

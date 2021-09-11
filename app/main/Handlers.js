@@ -5,12 +5,13 @@ const FilesListContainer = document.querySelector(".files-list__container");
 const FilesOutContainer = document.querySelector(".files-out__container");
 
 function handler_onload() {
-	// Add storage files on page
 	try {
+		// Add storage files on page
 		GetStorAll().map((file_name) => {
 			const //
 				file = { name: file_name },
 				File = makeFileContainer(file);
+
 			FilesListContainer.append(File);
 		});
 	} catch (error) {
@@ -21,22 +22,17 @@ function handler_onload() {
 
 function handler_onDropFiles() {
 	try {
-		const //
-			files = this.files;
+		const files = this.files;
 
-		Array.from(files).forEach(async (file) => {
-			if (file) {
-				const //
-					name = file.name,
-					text = await readFile(file),
-					File = makeFileContainer(file);
-				// Add file in storage and page
-				AddStor(name, text);
-				File && FilesListContainer.append(File);
-			}
-			if (!file) {
-				console.info("One file is null");
-			}
+		[...files].forEach(async (file) => {
+			const //
+				name = file.name,
+				text = await readFile(file),
+				File = makeFileContainer(file);
+
+			// Add file in storage and page
+			AddStor(name, text);
+			File && FilesListContainer.append(File);
 		});
 	} catch (error) {
 		console.info("Error in drop file, file is not added");
@@ -52,6 +48,7 @@ function handler_onFileButton() {
 			database = file_text && JSON.parse(file_text),
 			Table = database && makeTable({ database }),
 			Rows = Table.querySelectorAll(".row");
+
 		// Add table (rows) on page
 		Rows.forEach((Row) => TableContainer.append(Row));
 	} catch (error) {
@@ -82,6 +79,7 @@ function handler_onBtnCreateFile() {
 			name = prompt("Name") || Math.random().toString(16),
 			file = { name: name, link: url },
 			File = makeFileContainer(file);
+
 		// Add download file link on page
 		FilesOutContainer.append(File);
 	} catch (error) {

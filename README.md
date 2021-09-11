@@ -11,3 +11,7 @@ is the best way to manage static data
 - Safely
 - Locally
 - Convenirntly
+
+* [Components]("./components/README.md")
+* [Styles]("./styles/README.md")
+* [Tests]("./tests/README.md")

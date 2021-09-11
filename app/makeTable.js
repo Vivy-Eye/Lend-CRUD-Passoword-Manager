@@ -21,8 +21,10 @@ const makeButtonsFor = (place = "row") => {
 	setText(add, "+");
 	setText(del, "-");
 
-	ev(add, handler_onBtnsAddTableElement);
-	ev(del, handler_onBtnsDeleteTableElement);
+	if (handler_onBtnsAddTableElement && handler_onBtnsDeleteTableElement) {
+		ev(add, handler_onBtnsAddTableElement);
+		ev(del, handler_onBtnsDeleteTableElement);
+	}
 
 	Buttons.append(add);
 	Buttons.append(del);
@@ -51,8 +53,10 @@ const makeCellFields = ({ cell_name, cell_value }) => {
 	// [Ina.readOnly, Iva.readOnly] = [true, true];
 	[Ina, Iva].map((input) => CellFields.append(input));
 
-	ev(Ina, handler_autocopy);
-	ev(Iva, handler_autocopy);
+	if (handler_autocopy) {
+		ev(Ina, handler_autocopy);
+		ev(Iva, handler_autocopy);
+	}
 
 	return CellFields;
 };

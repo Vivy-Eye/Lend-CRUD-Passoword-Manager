@@ -15,7 +15,10 @@ function makeFileContainer({ name, size, link }) {
 
 	File.classList = "file-container-element";
 	File.insertAdjacentHTML("beforeend", html);
-	File.addEventListener("click", handler_onFileButton, false);
+
+	if (handler_onFileButton) {
+		File.addEventListener("click", handler_onFileButton, false);
+	}
 
 	return File;
 }

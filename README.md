@@ -2,7 +2,7 @@
 
 ### What is it?
 
-The CRID-Reactive-app is a good way to manage static data as JSON file.<br>
+The [CRID-Reactive-app](https://a-p-i-s.github.io/DSA) is a good way to manage static data as JSON file.<br>
 Not commercial-grade and with freely available source code.<br>
 Create, save, update, delete your own JSON file or files.<br>
 This is a _Safely_, _Locally_, _Convenirntly_.

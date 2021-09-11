@@ -30,7 +30,7 @@
 	> Table
 */
 .table-container {
-	min-height: 20vh;
+	min-height: 100vh;
 	--cell-width: 100%;
 	--row-width: min(12rem, 100% - 1rem);
 	--table-buttons-size: 1.5rem;

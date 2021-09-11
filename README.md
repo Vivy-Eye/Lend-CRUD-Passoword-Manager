@@ -2,16 +2,19 @@
 
 is the best way to manage static data
 
-- Password List
-- Task List
-- List of Activities
-
-### Why?
-
 - Safely
 - Locally
 - Convenirntly
 
-* [App]("./app/README.md")
-* [Lib]("./lib/README.md")
-* [Styles]("./styles/README.md")
+## Getting Started
+
+Open "index.html" with your browser.
+
+[m](https://www.figma.com/)
+
+## Readme's
+
+- [App](app/README.md)
+- [Lib](lib/README.md)
+- [Styles](styles/README.md)
+- [Tests](tests/README.md)

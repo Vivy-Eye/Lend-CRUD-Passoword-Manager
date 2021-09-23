@@ -6,7 +6,7 @@ The [CRID-Reactive-app](https://a-p-i-s.github.io/DSA) is a good way to manage s
 Not commercial-grade and with freely available source code.<br>
 Create, save, update, delete your own JSON file or files.<br>
 This is a _Safely_, _Locally_, _Convenirntly_.
-
+ 
 ### Getting Started
 
 ```
